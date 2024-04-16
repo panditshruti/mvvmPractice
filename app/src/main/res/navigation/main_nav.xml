@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/editMyDairyFragment">
+
+    <fragment
+        android:id="@+id/editMyDairyFragment"
+        android:name="com.rajnish.mydairy.uiFragment.EditMyDairyFragment"
+        android:label="fragment_edit_my_dairy"
+        tools:layout="@layout/fragment_edit_my_dairy" />
+</navigation>
