@@ -14,7 +14,6 @@ class TaskModelFactory(private val repository: TaskRepository):ViewModelProvider
             return TaskModel(repository) as T
         }
 
-
        throw IllegalArgumentException("Unknown ViewModel class")
 
     }

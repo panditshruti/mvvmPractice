@@ -3,11 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/editMyDairyFragment">
+    app:startDestination="@id/postTagFragment">
 
     <fragment
         android:id="@+id/editMyDairyFragment"
         android:name="com.rajnish.mydairy.uiFragment.EditMyDairyFragment"
         android:label="fragment_edit_my_dairy"
         tools:layout="@layout/fragment_edit_my_dairy" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.rajnish.mydairy.uiFragment.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.rajnish.mydairy.uiFragment.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.rajnish.mydairy.uiFragment.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.rajnish.mydairy.uiFragment.ApiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" />
+    <fragment
+        android:id="@+id/postTagFragment"
+        android:name="com.rajnish.mydairy.uiFragment.PostTagFragment"
+        android:label="fragment_post_tag"
+        tools:layout="@layout/fragment_post_tag" >
+        <action
+            android:id="@+id/action_postTagFragment_to_urlPostTagFragment"
+            app:destination="@id/urlPostTagFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/urlPostTagFragment"
+        android:name="com.rajnish.mydairy.uiFragment.UrlPostTagFragment"
+        android:label="fragment_url_post_tag"
+        tools:layout="@layout/fragment_url_post_tag" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="tag"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_urlPostTagFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.rajnish.mydairy.uiFragment.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
 </navigation>

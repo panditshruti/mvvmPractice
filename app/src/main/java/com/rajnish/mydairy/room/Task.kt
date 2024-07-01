@@ -2,7 +2,7 @@ package com.rajnish.mydairy.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import io.appwrite.ID
+
 @Entity(tableName = "Task")
 data class Task(
     @PrimaryKey(autoGenerate = true)
